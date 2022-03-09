@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: arfallaspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: arfallaspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: arfallaspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: arfallaspipelinesjavascriptdocker 
+          image: arfallas.azurecr.io/arfallaspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
